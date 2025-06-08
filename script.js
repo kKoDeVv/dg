@@ -38,7 +38,7 @@ function containsNonAlphanumeric(str) {
 }
 
 function signIn() {
-    username = usr.value;
+    username = usr.value.toLowerCase();
     password = pw.value;
     if (password.length < 6 || containsNonAlphanumeric(username) || username == ""){
         alert("Wrong username or password, Please try again.");
@@ -50,7 +50,7 @@ function signIn() {
 
 
 function signUp() {
-    username = usr.value;
+    username = usr.value.toLowerCase();
     password = pw.value;
     passwordCheck = pwc.value
     if (containsNonAlphanumeric(username)) {
@@ -98,5 +98,6 @@ function isMobile() {
 }
 
 if (isMobile()) {
-  document.body.classList.add("mobile");
+  document.getElementById("everything").style.visibility = "collapse"
+  document.getElementById("tempPhone").style.visibility = "visible"
 }

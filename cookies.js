@@ -11,7 +11,7 @@ function getCookie(name) {
 
 
 function setCookie(name, value){
-    document.cookie = name + "=" + value + ";expires=Tue, 19 Jan 2038 04:14:07 GMT;path=/;domain=kkodevv.github.io/dg;";
+    document.cookie = name + "=" + value + ";expires=Tue, 19 Jan 2038 04:14:07 GMT;path=/";
 }
 
 window.getCookie = getCookie;
