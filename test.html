@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test</title>
+
+    <style>
+        p{
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="si">Signed-In = null</p>
+    <p id="usr">Username = null</p>
+    <p id="ms">Message Sent = null</p>
+    <p id="mr">Message Received = null</p>
+</body>
+
+<script>
+    var si = document.getElementById("si");
+    var usr = document.getElementById("usr");
+    var ms = document.getElementById("ms");
+    var mr = document.getElementById("mr");
+
+    si.innerHTML = "Signed-In = False"
+    si.style.color = "red"
+    usr.innerHTML = "Username = None"
+    usr.style.color = "red"
+    ms.innerHTML = "Message Sent = None"
+    ms.style.color = "red"
+    mr.innerHTML = "Message Received = None"
+    mr.style.color = "red"
+
+</script>
+</html>
