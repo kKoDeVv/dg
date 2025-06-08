@@ -1,3 +1,4 @@
+
 const inTabButton = document.getElementById('inTab');
 const upTabButton = document.getElementById('upTab');
 const inButton = document.getElementById('inButton');
@@ -29,14 +30,39 @@ function upTabF(){
     pwc.style.display = "flex";
 }
 
-function signIn() {
-    alert("Wrong username or password, Please try again.");
+
+
+
+function containsNonAlphanumeric(str) {
+  return /[^a-zA-Z0-9]/.test(str);
 }
+
+function signIn() {
+    username = usr.value;
+    password = pw.value;
+    if (password.length < 6 || containsNonAlphanumeric(username) || username == ""){
+        alert("Wrong username or password, Please try again.");
+    }
+    else{
+        login(username, password)
+    }
+}
+
 
 function signUp() {
     username = usr.value;
     password = pw.value;
-    if (username == "" && password == "") {
+    passwordCheck = pwc.value
+    if (containsNonAlphanumeric(username)) {
+        alert("Can't create account, Username can only contain letters and numbers.")
+    }
+    else if (password != passwordCheck){
+        alert("Can't create account, Passwords don't match.")
+    }
+    else if (password.length < 6) {
+        alert("Can't create account, Password is too short. (6 characters or more)")
+    }
+    else if (username == "" && password == "") {
         alert("Can't create account, Username and passowrd can't be empty.");
     }
     else if (username == "") {
@@ -46,7 +72,8 @@ function signUp() {
         alert("Can't create account, Password can't be empty.");
     }
     else {
-        alert("Can't create account. " + username + ":" + password);
+        alert("Account Created!");
+        register(username, password)
     }
 }
 
@@ -64,4 +91,12 @@ function showPassword() {
         pwc.type = "text";
         checkBox.checked = true;
     }
+}
+
+function isMobile() {
+  return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+}
+
+if (isMobile()) {
+  document.body.classList.add("mobile");
 }

@@ -25,10 +25,23 @@
     var ms = document.getElementById("ms");
     var mr = document.getElementById("mr");
 
-    si.innerHTML = "Signed-In = False"
-    si.style.color = "red"
-    usr.innerHTML = "Username = None"
-    usr.style.color = "red"
+    if (getCookie("loggedIn")) {
+        si.innerHTML = "Signed-In = True"
+        si.style.color = "green"
+    }
+    else{
+        si.innerHTML = "Signed-In = False"
+        si.style.color = "red"
+    }
+
+    if (getCookie("username") != "null") {
+        usr.innerHTML = "Username = " + getCookie("username")
+        usr.style.color = "green"
+    }
+    else{
+        usr.innerHTML = "Username = None"
+        usr.style.color = "red"
+    }
     ms.innerHTML = "Message Sent = None"
     ms.style.color = "red"
     mr.innerHTML = "Message Received = None"
