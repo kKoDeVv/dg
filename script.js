@@ -72,7 +72,6 @@ function signUp() {
         alert("Can't create account, Password can't be empty.");
     }
     else {
-        alert("Account Created!");
         register(username, password)
     }
 }
@@ -100,4 +99,8 @@ function isMobile() {
 if (isMobile()) {
   document.getElementById("everything").style.visibility = "collapse"
   document.getElementById("tempPhone").style.visibility = "visible"
+}
+
+if (getCookie("loggedIn") == "true") {
+    window.location.href = 'test.html';
 }
