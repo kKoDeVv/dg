@@ -31,8 +31,8 @@ async function register(username, password) {
 
     console.log("Registered successfully!");
     alert("Account Created!");
-    setCookie("username", username)
-    window.location.href = 'profile.html';
+    //setCookie("username", username)
+    //window.location.href = 'profile.html';
   } catch (error) {
     console.error("Registration error:", error.message);
     if (error.message == "Firebase: Error (auth/email-already-in-use).") {
