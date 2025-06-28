@@ -8,7 +8,7 @@ if (getCookie("username") != "null") {
     fetchSentMessages()
 }
 else{
-    //window.location.href = 'index.html';
+    window.location.href = 'index.html';
 }
 
 //load message

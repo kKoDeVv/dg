@@ -120,6 +120,16 @@ input{
     font-family: 'Courier New', Courier, monospace;
 }
 
+textarea{
+    font-size: 30px;
+    width: 30vw;
+    margin-right: 10px;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .mainHolder{
     width: 100%;
     height: fit-content;
