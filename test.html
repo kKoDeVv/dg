@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test</title>
+
+    <style>
+        p{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        button{
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .parent{
+            height: auto;
+            background-color: wheat;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 50px;
+        }
+        .parent .couple{
+            height: fit-content;
+            width: fit-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent .info{
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            background-color: white;
+            padding: 10px;
+            border-radius: 50px;
+        }
+        .parent .title{
+            font-size: 30px;
+            margin-right: 20px;
+        }
+        .parent .following{
+            font-size: 20px;
+            margin-right: 50px;
+        }
+        .parent .messageHolder{
+            margin-top: 20px;
+            height: fit-content;
+            background-color: rgb(194, 156, 87);
+            border-radius: 50px;
+            padding: 10px;
+        }
+        .parent .messageText{
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="si">Signed-In = null</p>
+    <p id="usr">Username = null</p>
+    <p id="ms">Message Sent = null</p>
+
+
+    <p id="mr">Message Received = null</p>
+    <input id="rcvr" type="text" placeholder="Send to..."> <br><br>
+    <input id="msg" type="text" placeholder="Message"> <br><br>
+    <button onclick="prepMsg()">Send</button> <br><br>
+    <button onclick="logOut()">Log Out</button>
+</body>
+
+<script src="js/cookies.js"></script>
+<script type="module" src="js/firebase.js"></script>
+<script>
+    var si = document.getElementById("si");
+    var usr = document.getElementById("usr");
+    var ms = document.getElementById("ms");
+    var mr = document.getElementById("mr");
+    var rcvr1 = document.getElementById("rcvr");
+    var msg1 = document.getElementById("msg");
+
+    if (getCookie("loggedIn") == "true") {
+        si.innerHTML = "Signed-In = True"
+        si.style.color = "green"
+    }
+    else{
+        si.innerHTML = "Signed-In = False"
+        si.style.color = "red"
+    }
+
+    if (getCookie("username") != "null") {
+        usr.innerHTML = "Username = " + getCookie("username")
+        usr.style.color = "green"
+    }
+    else{
+        usr.innerHTML = "Username = None"
+        usr.style.color = "red"
+    }
+    ms.innerHTML = "Message Sent = None"
+    ms.style.color = "red"
+    mr.innerHTML = "Message Received = None"
+    mr.style.color = "red"
+
+
+    const referenceDiv = document.getElementById("ms");
+
+    const newDiv = document.createElement('div');
+    newDiv.className = 'parent';
+    newDiv.innerHTML = `
+    <div class="info">
+        <div class="couple">
+            <p class="title">Sent to:</p>
+            <p class="following" id="rcvr">None</p>
+        </div>
+        <div class="couple">
+            <p class="title">Time:</p>
+            <p class="following" id="time">None</p>
+        </div>
+    </div>
+    <div class="messageHolder">
+        <p class="title">Message:</p>
+        <p class="messageText" id="message">imagine some text here</p>
+    </div>
+    `;
+
+    referenceDiv.insertAdjacentElement('afterend', newDiv);
+
+
+    function logOut() {
+        setCookie("loggedIn", "false")
+        deleteCookie("username")
+        window.location.href = 'index.html';
+    }
+
+    async function prepMsg(){
+        var rcvr = rcvr1.value
+        var msg = msg1.value
+        const date = new Date().toLocaleDateString();
+        const time = new Date().toLocaleTimeString();
+
+        if (getCookie("username") == rcvr) {
+            alert("You can't send a message to yourself.")
+        }
+        else if(rcvr == "" || msg == "") {
+            alert("Please fill all fields.")
+        }
+        else{
+            sendMsg(rcvr, msg, date, time)
+        }
+    }
+</script>
+</html>
