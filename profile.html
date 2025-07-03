@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delbar Gustav | Profile</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="icon" href="pics/pigeon.webp">
+</head>
+
+<body>
+    <div id="everything">
+    <div class="tip">
+        <img src="pics/pigeon.webp" height="150px" style="-webkit-user-drag: none;">
+        <p class="tipTitle">Delbar Gustav</p>
+    </div>
+
+    <div class="upSide">
+        <img src="pics/user.webp" height="100">
+        <p id="usr">Username</p>
+        <button onclick="logOut()" class="danger" style="margin-left: 100px;">Log Out</button>
+    </div>
+
+    <div class="upSide">
+        <div style="display: flex; flex-direction: column;">
+            <p style="margin-bottom: 10px;">Send a message:</p>
+            <div style="display: flex; flex-direction: row;">
+                <input id="rcvr" type="text" placeholder="Send to... (Username)">
+                <textarea id="msg" placeholder="Message"></textarea> <br><br>
+                <button onclick="prepMsg()">Send</button> <br><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainHolder">
+        <div class="side" id="mrHolder">
+            <p class="title" id="mr">Messages Received:</p>
+            <img src="pics/refresh.webp" width="60px" onclick="fetchReceivedMessages()">
+        </div>
+
+        <div class="side">
+            <p class="title" id="ms">Messages sent:</p>
+        </div>
+    </div>
+    
+
+    <div class="footer" style="display: none;">
+        <p>Made By: Ayham J.</p>
+    </div>
+
+
+    </div>
+    <div style="background-color: black;visibility: collapse; display: flex; justify-content: center;
+    flex-direction: column; align-items: center; text-align: center;" id="tempPhone">
+        <p style="font-size: 200px; color: white;">˙◠˙</p>
+        <p style="font-size: 80px; color: white;">Site is currently unusable on mobile devices</p>
+        <p style="font-size: 80px; color: white;">-</p>
+        <p style="font-size: 80px; color: white;">Please use on a desktop computer</p>
+    </div>
+</body>
+
+<script src="js/cookies.js" defer></script>
+<script type="module" src="js/firebase.js" defer></script>
+<script src="js/profile.js" defer></script>
+</html>

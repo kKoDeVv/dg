@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delbar Gustav | Sign-in</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="pics/pigeon.webp">
+</head>
+
+<body>
+    <div id="everything">
+    <div class="tip">
+        <img src="pics/pigeon.webp" height="150px" style="-webkit-user-drag: none;">
+        <p class="tipTitle">Delbar Gustav</p>
+    </div>
+
+    <div class="tabsHolder">
+        <button class="tabActive" id="inTab" onclick="inTabF()">Log-in</button>
+        <div class="gap"></div>
+        <button class="tab" id="upTab" onclick="upTabF()">Sign-up</button>
+    </div>
+
+    <div class="sign" id="signIn" style="display: flex;">
+        <h1>Username:</h1>
+        <input type="text" placeholder="Enter your username" class="text" id="inUsername">
+        <div class="hline"></div>
+        <h1>Password:</h1>
+        <input type="password" placeholder="Enter your password" class="text" id="inPassword">
+        <input type="password" placeholder="Confirm password" class="text" id="inPasswordCheck" style="display: none;">
+        <div class="checkDiv" style="display: flex;" id="checkDiv" onclick="showPassword()">
+            <input type="checkbox" id="showPw" class="box">
+            <p class="sp">Show Password</p>
+        </div>
+        <button id="inButton" onclick="signIn()" style="display: flex;">Log-In</button>
+        <button id="upButton" onclick="signUp()" style="display: none;">Sign-Up</button>
+    </div>
+
+    <div class="footer" style="display: none;">
+        <p>Made By: Ayham J.</p>
+    </div>
+
+
+    </div>
+    <div style="background-color: black;visibility: collapse; display: flex; justify-content: center;
+    flex-direction: column; align-items: center; text-align: center;" id="tempPhone">
+        <p style="font-size: 200px; color: white;">˙◠˙</p>
+        <p style="font-size: 80px; color: white;">Site is currently unusable on mobile devices</p>
+        <p style="font-size: 80px; color: white;">-</p>
+        <p style="font-size: 80px; color: white;">Please use on a desktop computer</p>
+    </div>
+</body>
+
+<script src="js/cookies.js"></script>
+<script type="module" src="js/firebase.js"></script>
+<script src="js/index.js"></script>
+</html>
