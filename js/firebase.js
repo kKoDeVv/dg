@@ -131,7 +131,7 @@ async function countUserMessages() {
 async function fetchReceivedMessages() {
     document.getElementById("mrHolder").innerHTML =`
             <p class="title" id="mr">Messages Received:</p>
-            <img src="pics/refresh.webp" width="60px" onclick="fetchReceivedMessages()">
+                        <input type="image" class="rButton" src="pics/refresh.webp" onclick="fetchReceivedMessages()">
     `
     const db = getDatabase();
     const username = getCookie("username");

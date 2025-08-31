@@ -39,6 +39,73 @@ img{
     pointer-events: none;
 }
 
+
+@keyframes drop {
+  from {top: -300px;}
+  to {top: 50px;}
+}
+@keyframes backTop {
+  from {top: 50px;}
+  to {top: -300px;}
+}
+@keyframes timeLine {
+  from {width: 380px;}
+  to {width: 0px; background-color: red;}
+}
+
+.notifHolder{
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    animation-name: drop;
+    animation-duration: 0.5s;
+    .xButton{
+        margin-left: auto;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+    p{
+        font-size: 35px;
+        color: white;
+    }
+}
+.notif{
+    background-color: gray;
+    width: 400px;
+    padding: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px gray;
+}
+.timeLine{
+    width: auto;
+    height: 5px;
+    background-color: white;
+    animation-name: timeLine;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+}
+.notifError{
+    background-color: rgb(200, 0, 0);
+    width: 400px;
+    padding: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px gray;
+    p{
+        font-size: 35px;
+        color: white;
+    }
+}
+
+
 @font-face {
     font-family: nnormal;
     src: url(../fonts/DS-DIGI.TTF)

@@ -128,6 +128,7 @@ textarea{
     border-radius: 10px;
     padding: 10px;
     font-family: 'Courier New', Courier, monospace;
+    max-width: 35vw;
 }
 
 .mainHolder{
@@ -160,8 +161,9 @@ textarea{
         margin-bottom: 30px;
         font-family: bbold;
     }
-    img{
+    .rButton{
         position: absolute;
+        width: 60px;
         right: 20px;
         top: 20px;
         cursor: pointer;
@@ -170,7 +172,7 @@ textarea{
         padding: 8px;
         border: 0px;
     }
-    img:hover{
+    .rButton:hover{
         background-color: rgb(197, 0, 197);
     }
 }

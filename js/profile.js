@@ -8,7 +8,11 @@ if (getCookie("username") != "null") {
     fetchSentMessages()
 }
 else{
-    window.location.href = 'index.html';
+    //window.location.href = 'index.html';
+}
+
+if (getCookie("loggedIn") != "true") {
+    //window.location.href = 'index.html';
 }
 
 //load message
@@ -69,9 +73,6 @@ if (isMobile()) {
   document.getElementById("tempPhone").style.visibility = "visible"
 }
 
-if (getCookie("loggedIn") != "true") {
-    window.location.href = 'index.html';
-}
 
 
 function deleteMsg(msgID) {
