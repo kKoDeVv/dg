@@ -1,0 +1,9 @@
+// This script is used to load the consent.js script from the DataGrail API.
+(function () {
+    var config = JSON.parse('{"customerId":"e28585db-6c1b-4ad9-b61f-1dab9eda72f5","consentContainerVersion":"25478e09-efda-4b83-b535-feb891d7eb4f","privacyDomain":"api.consentjs.datagrail.io","plugins":{},"gppUsnat":false}');
+    var scriptUrl = "https://".concat(config.privacyDomain, "/consent/").concat(config.customerId, "/").concat(config.consentContainerVersion, "/consent.js");
+    var script = document.createElement('script');
+    script.src = scriptUrl;
+    script.async = true;
+    document.head.appendChild(script);
+})();
