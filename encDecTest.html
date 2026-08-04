@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .holder{
+            margin-top: 50px;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: wheat;
+            width: 80%;
+            height: 30%;
+        }
+        
+        h1{
+            font-size: 40px;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        p{
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        input{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: lightgreen;
+            margin-top: 30px;
+        }
+
+        h2{
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 30px;
+            user-select: all;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="holder">
+        <h1>Encrypt</h1>
+        <p>Text:</p>
+        <input type="text" id="encText">
+        <p>Key:</p>
+        <input type="text" id="keyInput">
+        <button onclick="encc()">Done</button>
+        <h2 id="encOutput">Output</p>
+    </div>
+
+    <div class="holder">
+        <h1>Decrypt</h1>
+        <p>Text:</p>
+        <input type="text" id="decText">
+        <p>Key:</p>
+        <input type="text" id="decKey">
+        <button onclick="decc()">Done</button>
+        <h2 id="decOutput">Output</p>
+        <p id="message" style="display: none;">Nothing</p>
+
+    </div>
+    <input type="checkbox" id="switchCheckBox" style="display: none;">
+</body>
+
+<script src="js/encDec.js"></script>
+<script>
+    function encc() {
+        const encOutput = document.getElementById("encOutput")
+        encOutput.innerHTML = enc(document.getElementById('encText').value)
+    }
+
+    function decc() {
+        const decOutput = document.getElementById("decOutput")
+        const decText = document.getElementById("decText")
+        const message = document.getElementById("message")
+        decOutput.innerHTML = dec("", document.getElementById("decKey").value)
+    }
+</script>
+</html>

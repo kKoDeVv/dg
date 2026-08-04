@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" href="css/notifs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .checkboxes{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            display: flex;
+            flex-direction: row;
+        }
+        .holder{
+            margin-right: 20px;
+        }
+        .boxTitle{
+            color: white;
+            font-size: 30px;
+            margin-left: 5px;
+        }
+        button{
+            font-size: 100px;
+            padding: 10px;
+        }
+        .notifText{
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="notif"></div>
+
+    <div class="checkboxes">
+        <div class="holder" style="display: flex;" id="holder" onclick="changeType()">
+            <input type="radio" checked="true" id="normal" class="box" name="type">
+            <p class="boxTitle">Normal</p>
+        </div>
+        <div class="holder" style="display: flex;" id="holder" onclick="changeType()">
+            <input type="radio" id="red" class="box" name="type">
+            <p class="boxTitle" style="color: red;">Red</p>
+        </div>
+        <div class="holder" style="display: flex;" id="holder" onclick="changeType()">
+            <input type="radio" id="green" class="box" name="type">
+            <p class="boxTitle" style="color: green;">Green</p>
+        </div>
+        <div class="holder" style="display: flex;" id="holder" onclick="changeType()">
+            <input type="radio" id="blue" class="box" name="type">
+        <p class="boxTitle" style="color: blue;">confirmation</p>
+        </div>
+
+    </div>
+    <textarea class="notifText" id="textArea"></textarea>
+    <button onclick="loadNotif(choosenType, document.getElementById('textArea').value)">Spawn</button>
+    <button onclick="getConfirm('close?')">Blue</button>
+</body>
+
+
+<script src="js/notifs.js"></script>
+<script>
+    var typeChecked = true;
+    var choosenType = "normal";
+    var notifsAmount = 0;
+    function changeType() {
+        const radio = event.currentTarget.querySelector('input[type="radio"]');
+        radio.checked = true;
+        typeChecked = true;
+        choosenType = radio.id;
+    }
+</script>
+</html>

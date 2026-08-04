@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delbar Gustav | Profile</title>
+    <link rel="stylesheet" href="css/notifs.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="icon" href="pics/main/pigeon.webp">
+</head>
+
+<body>
+    <div id="everything">
+
+    <div id="notif"></div>
+
+    <div class="tip">
+        <img src="pics/main/pigeon.webp" height="150px" style="-webkit-user-drag: none;">
+        <p class="tipTitle">Delbar Gustav</p>
+        <div class="burgerHolder" onclick="switchBurgerMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="burgerMenu" id="burgerMenu">
+            <a href="about.html">About</a>
+            <a href="encDecTest.html">Encryption / Decryption page</a>
+        </div>
+    </div>
+
+    <div class="upSide">
+        <img src="pics/profile/user.webp" height="100">
+        <p id="usr">Username</p>
+        <button onclick="loadNotif('blue', 'Are you sure you want to log out?', 'logOut')" class="danger" style="margin-left: 100px;">Log Out</button>
+    </div>
+
+    <div class="upSide">
+        <div style="display: flex; flex-direction: column;">
+            <p style="margin-bottom: 10px;">Send a message:</p>
+            <div style="display: flex; flex-direction: row;">
+                <input id="rcvr" type="text" placeholder="Send to... (Username)">
+                <textarea id="msg" placeholder="Message"></textarea> <br><br>
+                <button onclick="prepMsg()" id="sendButton">Send</button> <br><br>
+            </div>
+
+            <div style="display: flex; flex-direction: row; margin-top: 30px;">
+                <div class="checkDiv" style="display: flex; width: 45%;" id="checkDiv" onclick="switchEncrypt()">
+                    <input style="width: 20%;" type="checkbox" id="switchCheckBox" class="box" checked>
+                    <p style="margin-top: 8px;">Encrypt Message</p>
+                </div>
+
+                <input id="keyInput" type="text" placeholder="Encryption key">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="mainHolder">
+        <div class="side" id="mrHolder">
+            <p class="title" id="mr">Messages Received:</p>
+            <input type="image" class="rButton" src="pics/profile/refresh.webp" onclick="fetchReceivedMessages()">
+        </div>
+
+        <div class="side" id="msHolder">
+            <p class="title" id="ms">Messages sent:</p>
+        </div>
+    </div>
+    
+
+    <div class="footer" style="display: none;">
+        <p>Made By: Ayham J.</p>
+    </div>
+
+
+    </div>
+    <div style="background-color: black;visibility: collapse; display: flex; justify-content: center;
+    flex-direction: column; align-items: center; text-align: center;" id="tempPhone">
+        <p style="font-size: 200px; color: white;">˙◠˙</p>
+        <p style="font-size: 80px; color: white;">Site is currently unusable on mobile devices</p>
+        <p style="font-size: 80px; color: white;">-</p>
+        <p style="font-size: 80px; color: white;">Please use on a desktop computer</p>
+    </div>
+</body>
+
+<script src="js/notifs.js"></script>
+<script src="js/cookies.js"></script>
+<script type="module" src="js/firebase.js" defer></script>
+<script src="js/profile.js" defer></script>
+<script src="js/encDec.js"></script>
+</html>

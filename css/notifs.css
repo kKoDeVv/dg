@@ -1,0 +1,131 @@
+@keyframes drop {
+from {top: -300px;}
+to {top: 50px;}
+}
+@keyframes backTop {
+from {top: 50px;}
+to {top: -300px;}
+}
+@keyframes timeLine {
+from {width: 380px;}
+to {width: 0px; /*background-color: red;*/}
+}
+
+.notifHolder{
+    position: fixed;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: drop;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    .xButton{
+        margin-left: auto;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+        max-width: 50px;
+        padding: 0px;
+        border-radius: 0px;
+    }
+    p{
+        font-size: 25px;
+        color: white;
+    }
+}
+
+.skip .notifHolder{
+    animation-duration: 1ms;
+    animation-fill-mode: forwards;
+}
+
+
+
+.normal{
+    background-color: gray;
+    width: 400px;
+    padding: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    /*box-shadow: 10px 10px 5px gray;*/
+}
+.timeLine{
+    width: auto;
+    height: 5px;
+    background-color: white;
+    animation-name: timeLine;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.red{
+    background-color: rgb(255, 150, 150);
+    width: 400px;
+    padding: 10px;
+    border-style: solid;
+    border-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    /*box-shadow: 10px 10px 5px rgb(255, 150, 150);*/
+    p{
+        color: rgb(255, 0, 0);
+    }
+
+    .timeLine{
+    background-color: rgb(255, 0, 0);
+    }
+}
+
+.green{
+    background-color: rgb(150, 255, 150);
+    width: 400px;
+    padding: 10px;
+    border-style: solid;
+    border-color: green;
+    border-radius: 10px;
+    /*box-shadow: 10px 10px 5px rgb(150, 255, 150);*/
+    p{
+        color: green;
+    }
+
+    .timeLine{
+    background-color: green;
+    }
+}
+
+.blue{
+    background-color: lightblue;
+    width: 400px;
+    padding: 10px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 10px;
+    /*box-shadow: 10px 10px 5px rgb(150, 255, 150);*/
+    p{
+        color: blue;
+    }
+
+    .timeLine{
+    background-color: blue;
+    }
+}
+
+.confirmButton {
+    background-color: lightblue;
+    border-style: solid;
+    border-color: blue;
+    border-width: 3px;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.confirmButton:hover{
+    background-color: rgb(108, 149, 163);
+}

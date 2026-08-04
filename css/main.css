@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: nnormal;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+body{
+    background-color: black;
+}
+
+
+.tip{
+    background-color: purple;
+    width: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    border-radius: 200px;
+    border-color: rgb(75, 0, 75);
+    border-style: solid;
+    border-width: 10px;
+    margin-bottom: 80px;
+    margin-top: 30px;
+
+}
+.tipTitle{
+    font-size: 80px;
+    position: relative;
+    font-family: italicbold;
+    margin-left: 20px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+img{
+    pointer-events: none;
+}
+
+
+.disabledButton{
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+
+.burgerHolder{
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    div{
+        background-color: white;
+        width: 60px;
+        height: 12px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border-radius: 30px;
+    }
+}
+.burgerHolder:hover{
+    background-color: rgba(255, 255, 255, 0.300);
+}
+
+.burgerMenu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 60px;
+    top: 120px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    a{
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+        border-radius: 30px;
+        padding: 5px;
+    }
+    a:hover{
+        background-color: lightgray;
+    }
+}
+
+
+@font-face {
+    font-family: nnormal;
+    src: url(../fonts/DS-DIGI.TTF)
+}
+@font-face {
+    font-family: bbold;
+    src: url(../fonts/DS-DIGIB.TTF)
+}
+@font-face {
+    font-family: italicbold;
+    src: url(../fonts/DS-DIGIT.TTF)
+}
+
+@media (max-width: 816px) {
+    body {
+        .tipTitle{
+            font-size: 60px;
+        }
+    }
+}
