@@ -65,9 +65,8 @@ function removeNotif(toRemove, removeUsingButton) {
 
 
 
-
+const menu = document.getElementById("burgerMenu");
 function switchBurgerMenu() {
-    const menu = document.getElementById("burgerMenu");
     if (menu.style.display == "flex") {
         menu.style.display = "none";
     }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delbar Gustav | Encryption & Decryption</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/encDec.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="tip">
+        <img src="pics/main/pigeon.webp" height="150px" style="-webkit-user-drag: none; cursor: pointer; pointer-events: all;" onclick="window.location.href = 'index.html'">
+        <p class="tipTitle">Delbar Gustav</p>
+        <div class="burgerHolder" onclick="switchBurgerMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="burgerMenu" id="burgerMenu">
+            <a href="about.html">About</a>
+            <a href="index.html">Go back</a>
+        </div>
+    </div>
+
+    <div style="display: flex;">
+        <div class="holder" style="margin-right: 50px;">
+            <h1>Encrypt</h1>
+            <p>Text:</p>
+            <input type="text" id="encText">
+            <p>Key:</p>
+            <input type="text" id="keyInput">
+            <button onclick="encc()">Done</button>
+            <h2 id="encOutput">Output</p>
+        </div>
+        <div class="holder" style="margin-left: 50px;">
+            <h1>Decrypt</h1>
+            <p>Text:</p>
+            <input type="text" id="message">
+            <p>Key:</p>
+            <input type="text" id="decKey">
+            <button onclick="decc()">Done</button>
+            <h2 id="decOutput">Output</p>
+        </div>
+    </div>
+
+    <input type="checkbox" id="switchCheckBox" style="display: none;">
+</body>
+
+<script src="js/encDec.js"></script>
+<script src="js/notifs.js"></script>
+<script>
+    function encc() {
+        const encOutput = document.getElementById("encOutput")
+        encOutput.innerHTML = enc(document.getElementById('encText').value)
+    }
+
+    function decc() {
+        const decOutput = document.getElementById("decOutput")
+        const decText = document.getElementById("message")
+        decText.innerHTML = decText.value;
+        dec("", document.getElementById("decKey").value)
+    }
+</script>
+</html>

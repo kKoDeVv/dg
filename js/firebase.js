@@ -202,6 +202,25 @@ async function fetchSentMessages() {
     }
 }
 
+
+
+function deleteMsg(msgID) {
+  c0=0
+  /*
+  const db = getDatabase();
+  const username = getCookie("username");
+  const userMessagesRef = ref(db, 'sent/' + username);
+
+  let chatRef = db.ref('received/' + username + "/" + msgID);
+  chatRef.remove();
+  */
+}
+
+
+
+
+
+
 window.register = register;
 window.login = login;
 window.checkIfUserExists = checkIfUserExists;

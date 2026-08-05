@@ -96,6 +96,8 @@ img{
 }
 
 
+
+/*
 @font-face {
     font-family: nnormal;
     src: url(../fonts/DS-DIGI.TTF)
@@ -108,6 +110,7 @@ img{
     font-family: italicbold;
     src: url(../fonts/DS-DIGIT.TTF)
 }
+*/
 
 @media (max-width: 816px) {
     body {

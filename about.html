@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delbar Gustav | About</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="icon" href="pics/main/pigeon.webp">
+</head>
+
+<body>
+    <div class="tip">
+        <img src="pics/main/pigeon.webp" height="150px" style="-webkit-user-drag: none; cursor: pointer; pointer-events: all;" onclick="window.location.href = 'index.html'">
+        <p class="tipTitle">Delbar Gustav</p>
+        <div class="burgerHolder" onclick="switchBurgerMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="burgerMenu" id="burgerMenu">
+            <a href="index.html">Go back</a>
+            <a href="encDec.html">Encryption / Decryption page</a>
+        </div>
+    </div>
+
+    <div style="display: flex;">
+        <div class="section">
+            <h1>What is this site?</h1>
+            <p>A private messaging website, where you can share text-only information (for now), whether be encrypted or not.</p>
+        </div>
+        <div class="section">
+            <h1>Who made this site?</h1>
+            <p>Ayham J.</p>
+            <p>Socials:</p>
+        <socials id="socials">
+            <div class="social" onclick="window.open('https://www.instagram.com/thatayham/');">
+                <img src="pics/about/instagram.webp" width="30px">
+                <p style="color: rgb(223, 0, 167);">thatayham</p>
+            </div>
+            <div class="social" onclick="window.open('https://ayham.my.to/')">
+                <img src="pics/about/web.webp" width="30px">
+                <p style="color: black;">ayham.my.to</p>
+            </div>
+            <div class="social" onclick="window.open('https://github.com/kKoDeVv')">
+                <img src="pics/about/github.webp" width="30px">
+                <p style="color: black;">kKoDeVv</p>
+            </div>
+        </socials>
+
+        </div>
+    </div>
+    <div style="display: flex; display: none;">
+        <div class="section">
+            <h1>Credits</h1>
+            <p>Blah Blah</p>
+        </div>
+    </div>
+</body>
+
+<script src="js/notifs.js"></script>
+</html>

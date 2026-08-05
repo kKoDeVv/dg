@@ -15,7 +15,9 @@ if (getCookie("loggedIn") != "true") {
     //window.location.href = 'index.html';
 }
 
-
+function deleteMsg(msgID) {
+    c0=0
+}
 
 function logOut() {
     setCookie("loggedIn", "false")
@@ -56,11 +58,6 @@ if (isMobile()) {
   document.getElementById("tempPhone").style.visibility = "visible"
 }
 
-
-
-function deleteMsg(msgID) {
-    c0=0
-}
 
 function loadMS(rcvr, msg, t1me, msgID, enced) {
     const referenceDiv = document.getElementById("ms");

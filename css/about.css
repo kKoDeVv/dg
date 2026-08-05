@@ -1,0 +1,43 @@
+.section{
+    background-color: white;
+    width: 45%;
+    height: 400px;
+    margin: auto;
+    margin-top: 80px;
+    background-color: purple;
+    border-radius: 20px;
+    border-color: rgb(75, 0, 75);
+    border-style: solid;
+    border-width: 10px;
+    color: white;
+    padding: 20px;
+    p{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}
+
+.social{
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    p{
+        margin: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+.social:hover{
+    background-color: rgb(188, 188, 188);
+    padding: 10px;
+}

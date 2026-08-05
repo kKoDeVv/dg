@@ -77,7 +77,6 @@ function enc(plainText) {
 
 function dec(id, plainKey) {
     plainText = document.getElementById("message" + id).innerHTML;
-    console.log("message" + id)
 
     var numedText = [];
     var numedKey = [];
