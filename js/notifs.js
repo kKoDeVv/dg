@@ -3,7 +3,6 @@ function isMobile() {
 }
 if (isMobile()) {
     document.body.classList.add("mobile");
-    scrollToShow = 330
 }
 
 

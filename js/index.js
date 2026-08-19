@@ -99,8 +99,7 @@ function isMobile() {
 }
 
 if (isMobile()) {
-  document.getElementById("everything").style.visibility = "collapse"
-  document.getElementById("tempPhone").style.visibility = "visible"
+    document.body.classList.add("mobile");
 }
 
 if (getCookie("loggedIn") == "true") {

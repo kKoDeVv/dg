@@ -57,6 +57,7 @@ function isMobile() {
 }
 
 if (isMobile()) {
+    document.body.classList.add("mobile");
     document.getElementById('msHolder').style.display = "none"
     document.getElementById('mobileSwitchButton').style.display = "flex"
 }

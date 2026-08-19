@@ -10,6 +10,12 @@ checkBox.checked = true;
 encKey.disabled = false;
 
 
+function isMobile() {
+  return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+}
+if (isMobile()) {
+    document.body.classList.add("mobile");
+}
 
 function switchEncrypt() {
     if (usrWantsEnc) {
