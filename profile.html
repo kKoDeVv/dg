@@ -10,8 +10,6 @@
 </head>
 
 <body>
-    <div id="everything">
-
     <div id="notif"></div>
 
     <div class="tip">
@@ -46,14 +44,16 @@
             <div style="display: flex; flex-direction: row; margin-top: 30px;">
                 <div class="checkDiv" style="display: flex; width: 45%;" id="checkDiv" onclick="switchEncrypt()">
                     <input style="width: 20%;" type="checkbox" id="switchCheckBox" class="box" checked>
-                    <p style="margin-top: 8px;">Encrypt Message</p>
+                    <p>Encrypt Message</p>
                 </div>
 
-                <input id="keyInput" type="text" placeholder="Encryption key">
+                <input id="keyInput" class="keyInput" type="text" placeholder="Encryption key">
 
             </div>
         </div>
     </div>
+
+    <button onclick="switchMessages()" id="mobileSwitchButton" class="switchButton">Switch to messages sent</button>
 
     <div class="mainHolder">
         <div class="side" id="mrHolder">
@@ -69,16 +69,6 @@
 
     <div class="footer" style="display: none;">
         <p>Made By: Ayham J.</p>
-    </div>
-
-
-    </div>
-    <div style="background-color: black;visibility: collapse; display: flex; justify-content: center;
-    flex-direction: column; align-items: center; text-align: center;" id="tempPhone">
-        <p style="font-size: 200px; color: white;">˙◠˙</p>
-        <p style="font-size: 80px; color: white;">Site is currently unusable on mobile devices</p>
-        <p style="font-size: 80px; color: white;">-</p>
-        <p style="font-size: 80px; color: white;">Please use on a desktop computer</p>
     </div>
 </body>
 

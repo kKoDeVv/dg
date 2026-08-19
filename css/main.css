@@ -33,6 +33,7 @@ body{
     margin-left: 20px;
     user-select: none;
     -webkit-user-drag: none;
+    font-weight: bold;
 }
 
 img{
@@ -118,4 +119,34 @@ img{
             font-size: 60px;
         }
     }
+}
+
+body.mobile {
+.tipTitle{
+    font-size: 60px;
+}
+.tip{
+    height: 180px;
+    img{
+        height: 200px;
+    }
+}
+.burgerHolder{
+    margin-right: 50px;
+    div{
+        width: 100px;
+        height: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.burgerMenu{
+    top: 200px;
+    a{
+        font-size: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
 }

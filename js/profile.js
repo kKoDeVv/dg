@@ -2,6 +2,8 @@ var usr = document.getElementById("usr");
 var rcvr1 = document.getElementById("rcvr");
 var msg1 = document.getElementById("msg");
 var n = 0
+var currentlyRec = true
+
 if (getCookie("username") != "null") {
     usr.innerHTML = getCookie("username");
     fetchReceivedMessages()
@@ -24,6 +26,7 @@ function logOut() {
     deleteCookie("username")
     window.location.href = 'index.html';
 }
+
 
 async function prepMsg(){
     var rcvr = rcvr1.value.toLowerCase()
@@ -54,8 +57,8 @@ function isMobile() {
 }
 
 if (isMobile()) {
-  document.getElementById("everything").style.visibility = "collapse"
-  document.getElementById("tempPhone").style.visibility = "visible"
+    document.getElementById('msHolder').style.display = "none"
+    document.getElementById('mobileSwitchButton').style.display = "flex"
 }
 
 
@@ -168,6 +171,22 @@ function loadMR(sender, msg, t1me, msgID, enced) {
     referenceDiv.insertAdjacentElement('afterend', newDiv);
 }
 
+
+
+function switchMessages() {
+    if (currentlyRec) {
+        document.getElementById('msHolder').style.display = "flex"
+        document.getElementById('mrHolder').style.display = "none"
+        document.getElementById('mobileSwitchButton').innerHTML = "Switch to messages received"
+        currentlyRec = false
+    }
+    else{
+        document.getElementById('msHolder').style.display = "none"
+        document.getElementById('mrHolder').style.display = "flex"
+        document.getElementById('mobileSwitchButton').innerHTML = "Switch to messages sent"
+        currentlyRec = true
+    }
+}
 
 window.loadMS = loadMS;
 window.loadMR = loadMR;

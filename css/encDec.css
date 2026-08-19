@@ -1,4 +1,4 @@
-.holder{
+.holderEnc{
     margin-top: 50px;
     padding: 20px;
     border-radius: 20px;
@@ -10,6 +10,21 @@
     width: 300px;
     height: 30%;
     margin-left: auto;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+.holderDec{
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+    width: 300px;
+    height: 30%;
+    margin-left: 50px;
     margin-right: auto;
 }
 
@@ -58,4 +73,59 @@ h2{
     margin-top: 30px;
     user-select: all;
     color: white;
+}
+
+
+
+body.mobile {
+touch-action: manipulation;
+-webkit-tap-highlight-color: transparent;
+
+.encDecMain{
+    flex-direction: column;
+}
+.holderEnc{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.holderDec{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tip{
+    p{
+        color: black;
+        margin: 0px;
+        margin-left: 20px;
+    }
+}
+
+h1{
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+p{
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+input{
+    font-size: 40px;
+}
+
+button{
+    font-size: 50px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+h2{
+    font-size: 40px;
+}
 }

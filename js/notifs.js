@@ -1,3 +1,14 @@
+function isMobile() {
+    return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+}
+if (isMobile()) {
+    document.body.classList.add("mobile");
+    scrollToShow = 330
+}
+
+
+
+
 var notifsAmount = 0;
 var target = document.getElementById("notif");
 

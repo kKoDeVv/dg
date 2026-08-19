@@ -41,3 +41,57 @@
     background-color: rgb(188, 188, 188);
     padding: 10px;
 }
+
+
+
+
+body.mobile{
+touch-action: manipulation;
+-webkit-tap-highlight-color: transparent;
+
+.aboutMain{
+    display: flex;
+    flex-direction: column;
+}
+
+.section{
+    width: 90%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h1{
+        font-size: 50px;
+    }
+    p{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+}
+
+.socialsHolder{
+    margin-top: 30px;
+}
+
+.social{
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    p{
+        margin: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-weight: bold;
+        font-size: 40px;
+    }
+    img{
+        width: 35px;
+    }
+}
+}
